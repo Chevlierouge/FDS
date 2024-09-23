@@ -8,7 +8,7 @@ const User = require("./model/User");
 
 const app = express();
 
-mongoose.connect("mongodb://localhost:27017/login-app", {
+mongoose.connect("mongodb+srv://admin:admin@cluster0.atohl.mongodb.net/", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(
   require("express-session")({
-    secret: "your_secret_key", // Replace with a strong secret key
+    secret: "6532", // Replace with a strong secret key
     resave: false,
     saveUninitialized: false
   })
